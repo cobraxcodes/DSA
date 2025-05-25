@@ -48,8 +48,19 @@ console.log(wordFrequencyCounter("Hello hello world"))
 // Example:
 // numberCount([1, 2, 2, 3, 3, 3])
 // // { 1: 1, 2: 2, 3: 3 }
+const numberFrequencyCounter = (arr) =>{
+    let obj = {}
+    arr.forEach(x =>{
+        if(obj[x]){
+            obj[x]++
+        }else{
+            obj[x] = 1
+        }
+    })
+    return obj
+}
 
-
+console.log(numberFrequencyCounter([1,2,2,3,3,3]))
 
 // 📌 4️⃣ Find Most Frequent Character
 // Problem:
@@ -58,6 +69,29 @@ console.log(wordFrequencyCounter("Hello hello world"))
 // mostFrequentChar("mississippi")
 // // Output: "i"
 
+const findMostFrequent = (str) =>{
+    let obj ={}
+    str.split('').forEach(x =>{
+      if(obj[x]){
+        obj[x]++
+      }else{
+        obj[x] = 1
+      }
+    })
+        let biggestValue = 0;
+        let maxKey = ''
+
+    for(let key in obj){
+        if(obj[key] > biggestValue){
+            biggestValue = obj[key]
+            maxKey = key
+        }
+    }
+    return maxKey
+}
+
+
+console.log(findMostFrequent("mississippi"))
 
 
 // 📌 5️⃣ Find Unique Elements
@@ -69,3 +103,21 @@ console.log(wordFrequencyCounter("Hello hello world"))
 // Hint:
 // Use an object to count how many times each number appears, then filter the ones with a count of 1.
 
+const findUniqueElement = (arr) =>{
+    let obj = {}
+    arr.forEach(x => {
+        if (obj[x]){
+            obj[x]++
+        }else{
+            obj[x] = 1
+        }
+    })
+        let newArr=[] // creating the new array to store the numbers with only count of 1
+    for(let key in obj){ // this iterates through the object
+        if(obj[key] === 1){ // this iterates through the value of the obj
+            newArr.push(Number(key))
+        }
+    }
+    return newArr
+}
+console.log(findUniqueElement([1, 2, 2, 3, 4, 4, 5]))
