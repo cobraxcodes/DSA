@@ -26,6 +26,20 @@ console.log(charFrequency("banana"))
 // wordCount("Hello hello world")
 // // { hello: 2, world: 1 }
 
+const wordFrequencyCounter = (str) =>{
+    let obj = {}
+    str.split(' ').forEach(x =>{
+        x = x.toLowerCase()
+        if(obj[x]){
+            obj[x]++
+        }else{
+            obj[x] = 1
+        }
+    })
+    return obj
+}
+
+console.log(wordFrequencyCounter("Hello hello world"))
 
 
 // 📌 3️⃣ Number Frequency Counter
