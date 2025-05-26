@@ -34,8 +34,8 @@ console.log(sum([1,2,3,4]))
 // Example:
 // capitalizeWords(["apple", "banana"])
 // // Output: ["Apple", "Banana"]
-
-
+const capitalize = (arr) => arr.map(x => x.charAt(0).toUpperCase() + x.slice(1))
+console.log(capitalize(["apple", "banana"]))
 
 // 📌 5️⃣ Product of Numbers (.reduce())
 // Problem:
@@ -43,3 +43,6 @@ console.log(sum([1,2,3,4]))
 // Example:
 // productNumbers([1, 2, 3, 4])
 // // Output: 24
+const multiply = (arr) => arr.reduce((acc, curr) => {return acc * curr}, 1)
+ 
+console.log(multiply([1,2,3,4]))
