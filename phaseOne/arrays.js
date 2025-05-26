@@ -24,7 +24,9 @@ console.log(filterEven([1,2,3,4,5]))
 // sumNumbers([1, 2, 3, 4])
 // // Output: 10
 
+const sum = (arr) => arr.reduce((accumulator, current) => {return accumulator + current} , 0)
 
+console.log(sum([1,2,3,4]))
 
 // 📌 4️⃣ Capitalize Words (.map())
 // Problem:
