@@ -5,7 +5,6 @@
 // doubleNumbers([1, 2, 3])
 // // Output: [2, 4, 6]
 const double = (arr) => arr.map(num => num * 2) 
-
 console.log(double([1,2,3]))
 // 📌 2️⃣ Filter Even Numbers (.filter())
 // Problem:
@@ -14,7 +13,9 @@ console.log(double([1,2,3]))
 // filterEvens([1, 2, 3, 4, 5])
 // // Output: [2, 4]
 
+const filterEven = (arr) => arr.filter( x  => x % 2 === 0)
 
+console.log(filterEven([1,2,3,4,5]))
 
 // 📌 3️⃣ Sum of Numbers (.reduce())
 // Problem:
