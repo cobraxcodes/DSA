@@ -64,7 +64,16 @@ console.log(factorial(5))
 // reverseString("cat");
 // // Output: "tac"
 
+function reverse (str){
+    if ( str.length === 1){ // checks if string is only 2 letters
+        return str // return if so 
+    }
+        
+    return reverse(str.slice(1)) + str[0]; // ✅ Recursively process rest of the string
+}
 
+
+console.log(reverse('cat'))
 
 
 
@@ -77,3 +86,12 @@ console.log(factorial(5))
 // 4
 // 2
 // 0
+
+
+function countEven (n){
+    if(n < 0) return;
+    console.log(n)
+   countEven (n-2)
+    
+}
+console.log(countEven(6))
