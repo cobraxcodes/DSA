@@ -1,18 +1,42 @@
 
 //syntax
-const example = new Map();
+// const example = new Map();
 
-example.set("name", "Mel") // set is used for setting key-value pairs
-example.set(42, "Answer to Life"), // first paramete is key , second is value
-example.set(true, "YES")
+// example.set("name", "Mel") // set is used for setting key-value pairs
+// example.set(42, "Answer to Life"), // first paramete is key , second is value
+// example.set(true, "YES")
 
-
-console.log(example.get("name")) // get the value by key
-console.log(example.get(42))
-console.log(example.has(true)) // checks if the key exists
-console.log(example.size) // return the number of key-value pairs
+// console.log(example.get("name")) // get the value by key
+// console.log(example.get(42))
+// console.log(example.has(true)) // checks if the key exists
+// console.log(example.size) // return the number of key-value pairs
  
 
+// 📌 Map Mini Challenges
+// 1️⃣ Create a Map and add 3 key-value pairs: a string, a number, and a boolean as keys.
+const myMap = new Map()
+myMap.set("name", "K")
+myMap.set(26, "age")
+myMap.set(true, "isTall")
+
+// 2️⃣ Write a function hasKey(map, key) that checks if a given key exists in the Map.
+const hasKey = (map, key) => {
+    if(map.has(key)){
+        console.log(true)
+    }else{
+        return false
+    }
+    
+}
+
+console.log(hasKey(myMap, 26))
+// 3️⃣ Get the value for a numeric key from your Map.
+myMap.has(26)
+// 4️⃣ Delete a key-value pair from your Map.
+myMap.delete("name")
+// 5️⃣ Get the size of your Map.
+myMap.size
+console.log(myMap)
 
 
 
