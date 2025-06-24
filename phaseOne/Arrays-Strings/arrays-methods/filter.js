@@ -33,13 +33,29 @@ console.log(filterB)
 
 // 🟡 5 Intermediate Problems:
 // Filter words that start with a specific letter.
+const words = ["apple", "animal", "beaches", "dogs"]
+
+function start (words, letter){
+    return words.filter(x => x[0] === letter)
+}
+
+console.log(start(["apple", "animal", "beaches", "dogs"], "a"))
 
 // Filter numbers divisible by both 3 and 5.
+const div = [15,4,7,30,60,3]
+const three = div.filter(x => (x % 3) === 0 )
+const five = three.filter(x => (x % 5) === 0)
+console.log(five)
 
 // Filter out duplicate values from an array (using indexOf inside filter).
+const dupes = [1,1,2,3,4,4,4,5,6,1,7]
+const unique = [... new Set(dupes)]
+console.log(unique)
 
-// Filter out invalid email addresses from a list.
 
-// Chained .filter() and .map()
 // → Filter even numbers, then double them.
 // [1,2,3,4] → [4,8]
+const filterMe = [1,2,3,4]
+const evens = filterMe.filter(x => (x % 2 === 0))
+const double = evens.map(y => y * 2)
+console.log(double)
