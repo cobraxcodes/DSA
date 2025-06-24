@@ -36,14 +36,43 @@ console.log(maximum([1,2,3,4,5]))
 // 🟡 5 Intermediate Problems:
 // Flatten a 2D array.
 // [[1,2],[3,4]] → [1,2,3,4]
+const numsC = [[1,2],[3,4]]
+const flat = numsC.reduce((acc,x) => {
+    return acc.concat(numsC[1])
+})
+console.log(flat)
 
 // Count occurrences of letters in a string array.
 // ['a','b','a'] → {a:2, b:1}
+const letters = ['a', 'b', 'a']
+const countA = letters.reduce((acc, x) =>{
+        if(acc[x]){
+            acc[x]+=1
+        }else{
+            acc[x] = 1
+        }
+        return acc
+}, {})
+
+console.log(countA)
 
 // Convert an array of key-value pairs into an object.
 // [ ['a',1], ['b',2] ] → {a:1, b:2}
+const arrayA = [ ['a',1], ['b',2] ]
+const obj = arrayA.reduce((acc,item,index) =>{
+    acc[index] = item
+    return acc
+},{})
 
-// Group array items by a property (like age group)
+
 
 // Use reduce to filter and sum at once.
 // Sum only numbers > 10 from an array.
+const numsD = [1,2,3,20,20]
+const n = numsD.reduce((acc,x) =>{
+    if(x > 10){
+        acc += x
+    }
+    return acc
+}, 0)
+console.log(n)
