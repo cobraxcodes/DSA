@@ -34,14 +34,29 @@ console.log(toString)
 // 🟡 5 Intermediate Problems:
 // Return an array of string lengths.
 // ['hi', 'hello'] → [2, 5]
+const arrA = ["hi", "hello"]
+const countB = arrA.map(x => x.length)
+console.log(countB)
 
 // Format array of objects into a new array of strings.
 // [{name:'A', age:20}] → ['A is 20']
+const arrObj = [{name:'A', age:20}]
+const strNow = arrObj.map(x =>{
+    let name = x.name
+    let age = x.age
+    console.log(`${name} is ${age}`)
+})
 
 // Add a new key to each object in an array.
 // [{name:'A'}] → [{name:'A', active:true}]
+const keys = [{name:'A'}]
+let newObj = {active: true}
+keys.push(newObj)
+console.log(keys)
 
 // Square numbers in an array and then turn them into strings.
-
 // Chained .map(): multiply each number by 2, then convert to string.
-// [1, 2, 3] → ['2', '4', '6']
+// [1, 2, 3] → ['1', '4', '9']
+const arrB = [1,2,3]
+const squareStr = arrB.map(x => Math.pow(x, 2).toString())
+console.log(squareStr)
