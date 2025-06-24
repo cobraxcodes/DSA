@@ -1,14 +1,22 @@
 // 🟢 Easy:
 // Get the first 3 characters of a string.
-
+const str = "witchcraft"
+const firstThree = str.slice(0,3)
+console.log(firstThree)
 // Get the last 3 characters of a string.
+const lastThree = str.slice(-3)
+console.log(lastThree)
 
 // Get characters from index 2 to 5.
+const twoToFive = str.slice(2,5)
+console.log(twoToFive)
 
 // Slice everything from index 4 to the end.
-
+const fourToEnd = str.slice(4)
+console.log(fourToEnd)
 // Remove the first character of a string.
-
+const firstChar = str.slice(0,1)
+console.log(firstChar)
 // 🟡 Intermediate:
 // Get the middle character(s) of a string.
 
