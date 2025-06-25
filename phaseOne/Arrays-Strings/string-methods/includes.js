@@ -1,13 +1,21 @@
 // 🟢 Easy:
 // Check if a string contains "dog".
+const str = "I am a dog but I still love cats"
+const test = "cats"
+const check = str.includes(test)
+console.log(check)
 
 // Check if a sentence contains "JavaScript".
+const testA = "javascript"
+const strA = "my favorite language is java"
+const checkA = strA.includes(testA)
+console.log(checkA)
 
 // Check if a name contains "a" (case sensitive).
+const letter = "a"
+const checkB = strA.includes(letter)
+console.log(checkB)
 
-// Check if a string contains a number (like "3" in "1234").
-
-// Check if a sentence includes the word "happy".
 
 // 🟡 Intermediate:
 // Check if a sentence contains "hello" (case insensitive).
