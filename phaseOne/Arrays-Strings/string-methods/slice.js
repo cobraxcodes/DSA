@@ -17,14 +17,44 @@ console.log(fourToEnd)
 // Remove the first character of a string.
 const firstChar = str.slice(0,1)
 console.log(firstChar)
+
+
 // 🟡 Intermediate:
 // Get the middle character(s) of a string.
+const intermediate = 'sentence'
+const middle = intermediate.slice(3,5)
+console.log(middle)
 
 // Remove both the first and last character of a string.
+const strArr = intermediate.split("")
+const firstLetter = strArr.shift()
+const lastLetter = strArr.pop()
+console.log(strArr)
 
 // Get the first half of a string.
+function half(strArr){
+    let newStr = []
+    for(let i=0; i<(strArr.length / 2); i++){
+        newStr.push(strArr[i])
+    }
+    return newStr
+}
 
+console.log(half(strArr))
 // Reverse a string using .split().reverse().join() + slice() trick.
-
+let reverseMe = "reverse"
+let reverse= reverseMe.split("").reverse().join("")
+console.log(reverse)
 // Mask a phone number string to only show the last 4 digits.
 // Example: 1234567890 → ******7890
+
+
+    function hash (phoneNumber){
+        const lastFour = phoneNumber.slice(-4)
+        let hashed = []
+        for(let i=0; i<(phoneNumber.length - 4); i++){
+            hashed.push('*')
+        }
+    return hashed.join("")+lastFour
+    }
+    console.log(hash( "1234567890"))
