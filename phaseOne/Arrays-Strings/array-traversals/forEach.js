@@ -1,4 +1,3 @@
-// ✅ forEach loop — 5 Challenges
 // 1️⃣ Print the index + value of each item
 // ['a', 'b', 'c']
 // // Output: 0:a  1:b  2:c
