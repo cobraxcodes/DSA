@@ -93,17 +93,100 @@ console.log(middleNumber)
 
 
 // 🔹 Intermediate
+const sortedArrayWithDupes = [1, 3, 4, 4, 6, 7, 9, 9, 11, 13, 15];
+
 // 6️⃣ Find the first occurrence of a duplicate number in a sorted array.
 
+function occurence(sortedArrayWithDupes){
+    for(let i = 0; i<sortedArrayWithDupes.length; i++){
+        if(sortedArrayWithDupes[i] === sortedArrayWithDupes[ i + 1]){
+            return sortedArrayWithDupes[i]
+        }
+    }
+    return -1
+}
 
+console.log(occurence(sortedArrayWithDupes))
 // 7️⃣ Find the insert position for a number in a sorted array.
 
+function insert(arr, target){
+    let left = 0
+    let right = arr.length - 1
+
+    while(left < right){
+        let mid = Math.floor((left + right ) / 2)
+        if(arr[mid] === target){
+            return mid
+        }else if(arr[mid] < target){
+            left = mid + 1
+        }else{
+            right = mid -1
+        }
+    }
+    return left
+}
+
+console.log(insert([1, 3, 4, 4, 6, 7, 9, 9, 11, 13, 15], 2))
 
 // 8️⃣ Return the index of the smallest number greater than a target.
+    function smallestGreater(arr, target){
+        let left = 0
+        let right = arr.length - 1
+        let result = -1
 
+        while(left <= right){
+            let mid = Math.floor((left + right) / 2)
+
+            if(arr[mid] > target){
+                result = mid
+                right = mid -1
+                
+            }else{
+                left = mid + 1
+            }
+        }
+        return result
+    }
+
+    console.log(smallestGreater([1, 3, 4, 4, 6, 7, 9, 9, 11, 13, 15], 2))
 
 // 9️⃣ Count how many times a target appears in a sorted array.
-
+        function countTarget(arr, target){
+            let counter = 0;
+            for(let i=0; i<arr.length; i++){
+                if(arr[i] === target){
+                    counter++
+                }
+            }
+            return counter
+        }
+console.log(countTarget([1, 3, 4, 4, 6, 7, 9, 9, 11, 13, 15], 4))
 
 // 🔟 Search for a number in a rotated sorted array (this one’s interview gold 💰)
 
+        function rotatedArray(arr, target){
+            let left = 0;
+            let right = arr.length -1
+
+            while(left <= right){
+                let mid = Math.floor((left + right ) / 2)
+                if(arr[mid] === target){return mid}
+                if(arr[left] <= arr[mid]){
+                    if(arr[left] <= target && target < arr[mid]){
+                        right = mid - 1
+                    }else{
+                        left = mid + 1 
+                    }
+                }
+                else{
+                if(arr[mid] < target && target <= arr[right]){
+                    left = mid +1
+                }else{
+                    right = mid - 1
+                }
+                }
+            } 
+            return -1 
+        }
+
+console.log(rotatedArray([6, 7, 8, 9, 1, 2, 3, 4, 5], 2))
